@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TorneioValoran.ViewModel.ListMatchViewModel>
+
+<div class="row">
+    <div class="container">
+        <h2>TESTE</h2>
+        <br />
+
+        <a href="@Url.Action("Index", "Group")" class="btn btn-primary">Carregar Grupo</a>
+        <a href="@Url.Action("GenerateMatch", "Match")" class="btn btn-primary">Iniciar Partida</a>
+
+    </div>
+</div>
+
+<br /><br />
+
+
+<table class="table table-striped" data-search="true" data-toggle="table" cellspacing="1" data-pagination="true"
+       data-total-field="count" data-height="50%"  data-locale="pt-BR">
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th>GROUP</th>
+            <th>TIME A</th>
+            <th>TIME B</th>
+            <th>TIME VENCEDOR</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamWinner)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts {
+   
+    <link href="https://unpkg.com/bootstrap-table@1.14.1/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/bootstrap-table@1.14.1/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.14.1/dist/bootstrap-table-locale-all.min.js"></script>
+  
+}

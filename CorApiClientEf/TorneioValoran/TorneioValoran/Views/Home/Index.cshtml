@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Criar Time</h2>
+        <button type="button" class="btn btn-primary" onclick="window.location='@Url.Action("Index", "Team")'" >Criar</button>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-3">
+        <h2>Iniciar Partida</h2>
+        <button type="button" class="btn btn-success" onclick="window.location='@Url.Action("Index", "Group")'">Jogar</button>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="row">
+
+
+            <h2> Informe a quantidade de grupos</h2>
+            <select class="browser-default custom-select form-control" id="cmbQtdGroup" onchange="getGroup()">
+                <option selected>Selecione quantidade de grupos</option>
+                <option value="4">2 Grupos (4 Times)</option>
+                <option value="8">4 Grupos (8 Times)</option>
+                <option value="16">8 Grupos (16 Times)</option>
+            </select>
+            <br />
+            <div class="input_fields_wrap" id="dvIinputfields">
+                <button class="add_field_button btn btn-primary">Adicionar outro time</button>
+                <br /><br />
+                <div>
+                    <input type="text" name="" class="form-control">
+                    <br />
+                </div>
+            </div>
+
+            <br />
+            <button type="button" class="btn btn-primary" onclick="SubmitDados()">Gravar</button>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+@section scripts {
+
+    <script src="~/js/team.js"></script>
+
+}
