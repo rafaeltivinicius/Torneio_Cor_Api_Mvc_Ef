@@ -75,5 +75,13 @@ namespace ApiTorneioValoran.Blls
             return matchCreate;
         }
 
+        public bool DeleteAllMatch()
+        {
+            if(_repositorymatch.DeleteAll())
+            return true;
+
+            return false;
+        }
+
     }
 }

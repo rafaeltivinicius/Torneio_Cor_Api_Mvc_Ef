@@ -14,5 +14,6 @@ namespace ApiTorneioValoran.Repositories.Interfaces
         Group Save(Group item);
         Group Update(Group item);
         bool Delete(Group item);
+        bool DeleteAll();
     }
 }

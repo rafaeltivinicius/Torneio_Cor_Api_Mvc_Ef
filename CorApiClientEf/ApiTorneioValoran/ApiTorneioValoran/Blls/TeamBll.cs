@@ -7,17 +7,23 @@ namespace ApiTorneioValoran.Blls
 {
     public class TeamBll : ITeamBll
     {
-        private readonly IGroupRepository _repositoryGroup;
         private readonly ITeamRepository _repositoryTeam;
+        private readonly IGroupBll _bllGroup;
+        private readonly IMatchBll _bllMatch;
 
-        public TeamBll(IGroupRepository repositoryGroup, ITeamRepository teamRepository)
+        public TeamBll(ITeamRepository teamRepository, IGroupBll groupBll,IMatchBll matchBll)
         {
-            _repositoryGroup = repositoryGroup;
+            _bllGroup = groupBll;
             _repositoryTeam = teamRepository;
+            _bllMatch = matchBll;
+
         }
 
         public List<Team> SaveTeam(List<Team> teams)
         {
+            if (!DeleteAll())
+                return null;
+
             var teamsCreate = new List<Team>();
 
             foreach (var team in teams)
@@ -26,6 +32,28 @@ namespace ApiTorneioValoran.Blls
             }
 
             return teamsCreate;
+        }
+
+        public bool DeleteAllTemas()
+        {
+            if(_repositoryTeam.DeleteAll())
+            return true;
+
+            return false;
+        }
+
+        public bool DeleteAll()
+        {
+            if(!_bllMatch.DeleteAllMatch())
+            return false;
+
+            if (!_bllGroup.DeleteAllGroup()) 
+            return false;
+
+            if (!DeleteAllTemas()) 
+            return false;
+
+            return true;
         }
     }
 }

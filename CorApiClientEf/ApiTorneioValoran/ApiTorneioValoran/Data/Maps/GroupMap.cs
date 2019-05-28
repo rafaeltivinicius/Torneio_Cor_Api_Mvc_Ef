@@ -15,7 +15,7 @@ namespace ApiTorneioValoran.Data.Maps
             builder.ToTable("Groups");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).IsRequired().HasMaxLength(1024).HasColumnType("varchar(1024)");
-            builder.HasOne(p => p.Match).WithOne(q => q.Group).HasForeignKey<Match>(i => i.IdGrupo);
+            builder.HasOne(p => p.Match).WithOne(q => q.Group).HasForeignKey<Match>(q => q.IdGrupo);
             builder.HasMany(p => p.Teams).WithOne(q => q.Group).IsRequired(false);
         }
     }

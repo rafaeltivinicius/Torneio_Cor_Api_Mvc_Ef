@@ -16,7 +16,8 @@ namespace ApiTorneioValoran.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost,1433;Database=bdValoran31;User ID=SA;Password=Leafar17.");
+            optionsBuilder.UseSqlServer(@"Server=localhost,1433;Database=bdValoran1;User ID=SA;Password=leafar");
+            //optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf.mdf;Integrated Security=True;Connect Timeout=30");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

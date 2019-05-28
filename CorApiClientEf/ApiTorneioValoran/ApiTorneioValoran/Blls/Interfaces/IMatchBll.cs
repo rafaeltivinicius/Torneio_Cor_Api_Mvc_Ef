@@ -8,5 +8,7 @@ namespace ApiTorneioValoran.Blls.Interfaces
         List<Match> StarMatch(List<Group> groups);
         List<Match> OverMatch(List<Match> matchsin);
         List<Match> SaveMatch(List<Match> matchs);
+
+        bool DeleteAllMatch();
     }
 }

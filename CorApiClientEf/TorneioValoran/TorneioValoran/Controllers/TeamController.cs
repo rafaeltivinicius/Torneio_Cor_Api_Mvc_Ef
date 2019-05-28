@@ -26,13 +26,9 @@ namespace TorneioValoran.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]List<Team> model)
+        public IActionResult Create([FromBody]List<Team> teams)
         {
-
-            var modell = new List<Team> { new Team { Name = "Time 1" }, new Team { Name = "Time 2" },
-            new Team { Name = "Time 3" }, new Team { Name = "Time 4" }};
-
-            var result = _repositoryTeam.Create(modell);
+            var result = _repositoryTeam.Create(teams);
 
             return View("Index");
         }

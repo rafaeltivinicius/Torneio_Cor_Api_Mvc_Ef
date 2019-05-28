@@ -13,5 +13,6 @@ namespace ApiTorneioValoran.Repositories.Interfaces
         Match Save(Match item);
         Match Update(Match item);
         bool Delete(Match item);
+        bool DeleteAll();
     }
 }

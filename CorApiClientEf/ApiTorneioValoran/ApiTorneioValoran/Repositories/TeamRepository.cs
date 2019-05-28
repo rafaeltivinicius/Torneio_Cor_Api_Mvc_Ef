@@ -25,6 +25,16 @@ namespace ApiTorneioValoran.Repositories
             return true;
         }
 
+
+        public bool DeleteAll()
+        {
+            var resut = Get();
+            _context.Team.RemoveRange(resut);
+            _context.SaveChanges();
+
+            return true;
+        }
+
         public IEnumerable<Team> Get()
         {
             return _context.Team.Include(x => x.Group).AsNoTracking().ToList();

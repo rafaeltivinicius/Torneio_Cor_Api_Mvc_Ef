@@ -40,3 +40,17 @@ D:\Projetos\TorneioApiEf\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran
 D:\Projetos\TorneioApiEf\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.RazorTargetAssemblyInfo.cache
 D:\Projetos\TorneioApiEf\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.dll
 D:\Projetos\TorneioApiEf\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.pdb
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\bin\Debug\netcoreapp2.1\ApiTorneioValoran.deps.json
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\bin\Debug\netcoreapp2.1\ApiTorneioValoran.runtimeconfig.json
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\bin\Debug\netcoreapp2.1\ApiTorneioValoran.runtimeconfig.dev.json
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\bin\Debug\netcoreapp2.1\ApiTorneioValoran.dll
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\bin\Debug\netcoreapp2.1\ApiTorneioValoran.pdb
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.csprojAssemblyReference.cache
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.csproj.CoreCompileInputs.cache
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.RazorAssemblyInfo.cache
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.RazorAssemblyInfo.cs
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.AssemblyInfoInputs.cache
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.AssemblyInfo.cs
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.RazorTargetAssemblyInfo.cache
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.dll
+D:\Projetos\Torneio_Cor_Api_Mvc_Ef\CorApiClientEf\ApiTorneioValoran\ApiTorneioValoran\obj\Debug\netcoreapp2.1\ApiTorneioValoran.pdb

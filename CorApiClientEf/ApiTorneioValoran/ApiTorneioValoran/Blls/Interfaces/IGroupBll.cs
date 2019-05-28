@@ -8,5 +8,7 @@ namespace ApiTorneioValoran.Blls.Interfaces
         bool GroupTeamLink(int fase = 1,List<Team> teams = null);
         List<Group> GetGroupFullValidated();
         int GetFaseGroup();
+
+        bool DeleteAllGroup();
     }
 }

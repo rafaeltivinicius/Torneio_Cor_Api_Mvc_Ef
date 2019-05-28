@@ -85,5 +85,13 @@ namespace ApiTorneioValoran.Blls
 
             return fases;
         }
+
+        public bool DeleteAllGroup()
+        {
+            if(_repositoryGroup.DeleteAll())
+            return true;
+
+            return false;
+        }
     }
 }

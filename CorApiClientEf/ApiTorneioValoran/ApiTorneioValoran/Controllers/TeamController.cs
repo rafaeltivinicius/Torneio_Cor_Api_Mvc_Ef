@@ -51,6 +51,7 @@ namespace ApiTorneioValoran.Controllers
 
             return new CreatedResult("Team create", result);
         }
+
     }
 }
 
