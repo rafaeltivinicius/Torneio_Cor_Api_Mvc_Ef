@@ -45,9 +45,9 @@ namespace ApiTorneioValoran.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var fase = _bllGroup.GetFaseGroup();
+            var fase = _bllGroup.GetLastFase();
 
-            var groups = _repositoryGroup.GetbyPhase(fase);
+            var groups = _bllGroup.GetGroupLastFase();
 
             var matchs = _bllMatch.StarMatch(groups.ToList());
 
@@ -56,7 +56,7 @@ namespace ApiTorneioValoran.Controllers
             var matchFull = _bllMatch.SaveMatch(overMatchs);
 
             var teamWiner = matchFull.Select(x => x.RsultTeamChampion).ToList();
-
+            //valida exception
             var result = _bllGroup.GroupTeamLink(fase+1, teamWiner);
 
             if (matchFull == null)

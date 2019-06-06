@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiTorneioValoran.Migrations
 {
     [DbContext(typeof(StoreDataContext))]
-    [Migration("20190527030935_InitialCreate")]
+    [Migration("20190530055602_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,13 +51,14 @@ namespace ApiTorneioValoran.Migrations
 
                     b.Property<int>("IdRsultTeamChampion");
 
+                    b.Property<int?>("RsultTeamChampionId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdGrupo")
                         .IsUnique();
 
-                    b.HasIndex("IdRsultTeamChampion")
-                        .IsUnique();
+                    b.HasIndex("RsultTeamChampionId");
 
                     b.ToTable("Matchs");
                 });
@@ -90,9 +91,8 @@ namespace ApiTorneioValoran.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ApiTorneioValoran.Models.Team", "RsultTeamChampion")
-                        .WithOne("Match")
-                        .HasForeignKey("ApiTorneioValoran.Models.Match", "IdRsultTeamChampion")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany("Match")
+                        .HasForeignKey("RsultTeamChampionId");
                 });
 
             modelBuilder.Entity("ApiTorneioValoran.Models.Team", b =>

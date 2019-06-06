@@ -48,7 +48,7 @@ namespace TorneioValoran.Repositories
             {
                 client.BaseAddress = new Uri(_urlApi);
 
-                var responseTask = client.GetAsync("GetbyPhase");
+                var responseTask = client.GetAsync("GetGroupLastFase");
                 responseTask.Wait();
 
                 var result = responseTask.Result;

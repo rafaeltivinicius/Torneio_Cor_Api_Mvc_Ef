@@ -14,30 +14,48 @@ namespace TorneioValoran.Controllers
     public class GroupController : Controller
     {
         private readonly IGroupRepository _repositoryGroup;
+        public List<ListMatchViewModel> dataTable { get; set; }
+        private static bool PrimayAcess = true;
 
         public GroupController(IGroupRepository repositoryGroup)
         {
+            this.dataTable = new List<ListMatchViewModel>();
             _repositoryGroup = repositoryGroup;
         }
 
         public IActionResult Index()
         {
-            var groups = TempData.Get<List<Match>>("Match");
+            if (PrimayAcess)
+                PrimaryLoad();
 
-            if (groups == null) {
-                 var result = _repositoryGroup.Create();
-                return View(PirmaryLoad(_repositoryGroup.ListGroup().ToList()));
-            }
-            else
-                return View(NextLoad(groups));
-
+            return View(dataTable);
         }
 
-
-
-        public List<ListMatchViewModel>  PirmaryLoad(List<Group> groups)
+        public IActionResult PrimaryLoad()
         {
-            var result = new List<ListMatchViewModel>(); 
+            dataTable = PirmaryLoad(_repositoryGroup.Create());
+            PrimayAcess = false;
+
+            return View("Index");
+        }
+
+        public IActionResult LoadLastGroupNotResult()
+        {
+            dataTable = PirmaryLoad(_repositoryGroup.ListGroupFase());
+
+            return View("Index", dataTable);
+        }
+
+        public IActionResult LoadLastGroupWitchResult()
+        {
+            dataTable = NextLoad(TempData.Get<List<Match>>("resultMatch"));
+
+            return View("Index",dataTable);
+        }
+
+        public List<ListMatchViewModel> PirmaryLoad(List<Group> groups)
+        {
+            var result = new List<ListMatchViewModel>();
 
             foreach (var item in groups)
             {
@@ -54,7 +72,7 @@ namespace TorneioValoran.Controllers
             return result;
         }
 
-        public List<ListMatchViewModel>  NextLoad(List<Match> groups)
+        public List<ListMatchViewModel> NextLoad(List<Match> groups)
         {
             var result = new List<ListMatchViewModel>();
 

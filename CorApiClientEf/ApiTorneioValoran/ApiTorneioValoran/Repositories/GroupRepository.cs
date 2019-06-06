@@ -35,7 +35,7 @@ namespace ApiTorneioValoran.Repositories
         public bool DeleteAll()
         {
             var resut = Get();
-            _context.Group.RemoveRange(resut);
+            _context.Group.RemoveRange(_context.Group);
             _context.SaveChanges();
 
             return true;

@@ -49,6 +49,7 @@ namespace ApiTorneioValoran.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Date = table.Column<DateTime>(nullable: false),
+                    RsultTeamChampionId = table.Column<int>(nullable: true),
                     IdGrupo = table.Column<int>(nullable: false),
                     IdRsultTeamChampion = table.Column<int>(nullable: false)
                 },
@@ -62,11 +63,11 @@ namespace ApiTorneioValoran.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Matchs_Teams_IdRsultTeamChampion",
-                        column: x => x.IdRsultTeamChampion,
+                        name: "FK_Matchs_Teams_RsultTeamChampionId",
+                        column: x => x.RsultTeamChampionId,
                         principalTable: "Teams",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -76,10 +77,9 @@ namespace ApiTorneioValoran.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Matchs_IdRsultTeamChampion",
+                name: "IX_Matchs_RsultTeamChampionId",
                 table: "Matchs",
-                column: "IdRsultTeamChampion",
-                unique: true);
+                column: "RsultTeamChampionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Teams_GroupId",

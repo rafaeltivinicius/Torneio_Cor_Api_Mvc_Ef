@@ -39,13 +39,11 @@ namespace ApiTorneioValoran.Controllers
             return Ok(reult);
         }
 
-        [Route("GetbyPhase")]
+        [Route("GetGroupLastFase")]
         [HttpGet]
         public IActionResult GetbyPhase()
         {
-            var fase = _groupBll.GetFaseGroup();
-
-            var reult = _repositoryGroup.GetbyPhase(fase);
+            var reult = _groupBll.GetGroupLastFase();
 
             if (reult == null)
                 return NotFound();
@@ -60,9 +58,7 @@ namespace ApiTorneioValoran.Controllers
             if (!_groupBll.GroupTeamLink())
                 return BadRequest();
 
-            var result = _groupBll.GetGroupFullValidated();
-
-            return new CreatedResult("", result);
+            return new CreatedResult("", _groupBll.GetGroupLastFase());
         }
 
         [HttpPut]

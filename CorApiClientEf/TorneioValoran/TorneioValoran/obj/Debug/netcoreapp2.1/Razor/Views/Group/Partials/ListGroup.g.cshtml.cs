@@ -54,7 +54,7 @@ using TorneioValoran.Models;
             WriteLiteral("\r\n<p>\r\n    ");
             EndContext();
             BeginContext(76, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a5b64d4814e4cb7b4f7f6c7d1b85b41", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ce14b65f50546acb0bfdb789a483a06", async() => {
                 BeginContext(99, 10, true);
                 WriteLiteral("Create New");
                 EndContext();

@@ -26,11 +26,11 @@ namespace TorneioValoran.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]List<Team> teams)
+        public async Task<IActionResult> Create([FromBody]List<Team> teams)
         {
-            var result = _repositoryTeam.Create(teams);
+            var result = await _repositoryTeam.Create(teams);
 
-            return View("Index");
+            return View("Index", result);
         }
     }
 }

@@ -49,13 +49,14 @@ namespace ApiTorneioValoran.Migrations
 
                     b.Property<int>("IdRsultTeamChampion");
 
+                    b.Property<int?>("RsultTeamChampionId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdGrupo")
                         .IsUnique();
 
-                    b.HasIndex("IdRsultTeamChampion")
-                        .IsUnique();
+                    b.HasIndex("RsultTeamChampionId");
 
                     b.ToTable("Matchs");
                 });
@@ -88,9 +89,8 @@ namespace ApiTorneioValoran.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ApiTorneioValoran.Models.Team", "RsultTeamChampion")
-                        .WithOne("Match")
-                        .HasForeignKey("ApiTorneioValoran.Models.Match", "IdRsultTeamChampion")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany("Match")
+                        .HasForeignKey("RsultTeamChampionId");
                 });
 
             modelBuilder.Entity("ApiTorneioValoran.Models.Team", b =>

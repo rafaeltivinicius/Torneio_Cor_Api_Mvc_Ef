@@ -44,7 +44,7 @@ namespace TorneioValoran.Repositories
             return null;
         }
         
-        public List<Team> Create(List<Team> teams)
+        public async Task<List<Team>> Create(List<Team> teams)
         {
             IEnumerable<Team> team = null;
 
@@ -52,17 +52,11 @@ namespace TorneioValoran.Repositories
             {
                 client.BaseAddress = new Uri(_urlApi);
 
-                var responseTask = client.PostAsJsonAsync("Create", teams);
-                responseTask.Wait();
+                var responseTask = await client.PostAsJsonAsync("Create", teams);
 
-                var result = responseTask.Result;
-
-                if (result.IsSuccessStatusCode)
+                if (responseTask.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<IList<Team>>();
-                    readTask.Wait();
-
-                    team = readTask.Result;
+                    team = responseTask.Content.ReadAsAsync<IList<Team>>().Result;
                 }
                 else
                 {

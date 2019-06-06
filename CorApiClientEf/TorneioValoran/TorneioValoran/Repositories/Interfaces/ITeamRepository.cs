@@ -9,7 +9,6 @@ namespace TorneioValoran.Repositories.Interfaces
     public interface ITeamRepository
     {
         List<Team> ListTeam();
-
-        List<Team> Create(List<Team> teams);
+        Task<List<Team>> Create(List<Team> teams);
     }
 }

@@ -43,47 +43,19 @@ namespace ApiTorneioValoran.Blls
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return false;
             }
         }
-       
-        public List<Group> GetGroupFullValidated()
+
+        public List<Group> GetGroupLastFase()
         {
-            var groups = _repositoryGroup.Get().ToList();
-            var groupValid = new List<Group>();
-            var groupFull = new List<Group>();
-            var validGroupChampion = 2;
-
-            if ((groups.Count() % 2) != 0)
-                groups.RemoveAt(groups.Count - 1);
-
-            try
-            {
-                foreach (var group in groups)
-                {
-                    groupValid.Add(group);
-
-                    if (groupValid.Count() >= validGroupChampion)
-                    {
-                        groupFull.AddRange(groupValid);
-
-                        validGroupChampion = validGroupChampion * 2;
-                    }
-                }
-
-                return groupFull;
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
+            return _repositoryGroup.GetbyPhase(GetLastFase()).ToList();
         }
 
-        public int GetFaseGroup()
+        public int GetLastFase()
         {
-            var fases =  _repositoryGroup.Get().Select(x => x.Fase).ToList().Max();
-
-            return fases;
+            return _repositoryGroup.Get().Select(x => x.Fase).ToList().Max();
         }
 
         public bool DeleteAllGroup()

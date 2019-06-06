@@ -73,7 +73,7 @@ using TorneioValoran.Models;
                 ");
             EndContext();
             BeginContext(343, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bcc8cdc5aaf4deb9fcafe0546c4c6f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f73a3a251bc9434bb62a83c4bb30f363", async() => {
                 BeginContext(360, 30, true);
                 WriteLiteral("Selecione quantidade de grupos");
                 EndContext();
@@ -96,7 +96,7 @@ using TorneioValoran.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(417, 45, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa47a1f6d60046018a94627338a8599f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa4091f3ac29498187a6c4bd1d4a0ec8", async() => {
                 BeginContext(435, 18, true);
                 WriteLiteral("2 Grupos (4 Times)");
                 EndContext();
@@ -118,7 +118,7 @@ using TorneioValoran.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(480, 45, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd762261f76c47068d1c79f9d7fcd607", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6f87f837cba468d94b0a7d237b12712", async() => {
                 BeginContext(498, 18, true);
                 WriteLiteral("4 Grupos (8 Times)");
                 EndContext();
@@ -140,7 +140,7 @@ using TorneioValoran.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(543, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ae589f0175241a7b861690f0d1c27a1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc38b5bb4b714614bcc173896f731fb8", async() => {
                 BeginContext(562, 19, true);
                 WriteLiteral("8 Grupos (16 Times)");
                 EndContext();
@@ -185,7 +185,7 @@ using TorneioValoran.Models;
                 WriteLiteral("\r\n\r\n    ");
                 EndContext();
                 BeginContext(1210, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27b9eb2e5d5f47d780823fbe577d240d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb41c3737fcd4c42bc2ce5375dfc5bef", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

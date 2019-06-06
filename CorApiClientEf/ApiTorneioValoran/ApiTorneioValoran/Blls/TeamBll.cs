@@ -44,14 +44,16 @@ namespace ApiTorneioValoran.Blls
 
         public bool DeleteAll()
         {
-            if(!_bllMatch.DeleteAllMatch())
-            return false;
 
-            if (!_bllGroup.DeleteAllGroup()) 
-            return false;
+            if (!_bllMatch.DeleteAllMatch())
+                return false;
 
             if (!DeleteAllTemas()) 
             return false;
+
+            if (!_bllGroup.DeleteAllGroup())
+                return false;
+
 
             return true;
         }

@@ -29,9 +29,9 @@ namespace TorneioValoran.Controllers
         {
             var result =  _repositoryMatch.Create();
 
-            TempData.Put("Match", result);
+            TempData.Put("resultMatch", result);
 
-            return RedirectToAction("Index", "Group");
+            return RedirectToAction("LoadLastGroupWitchResult", "Group");
         }
     }
 }

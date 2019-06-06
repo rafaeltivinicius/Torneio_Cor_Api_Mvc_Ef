@@ -10,5 +10,6 @@ namespace TorneioValoran.Repositories.Interfaces
     {
         List<Group> ListGroup();
         List<Group> Create();
+        List<Group> ListGroupFase();
     }
 }
